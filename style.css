@@ -1,59 +1,161 @@
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0a0a0a;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+
+body.dark-mode {
+  background-color: #0a0a0a;
+  color: white;
+}
+
+
+.container {
+  background-color: rgb(219, 202, 202);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out; 
+}
+
+
+body.dark-mode .container {
+  background-color: #333;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #164679;
+}
+
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+
+input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input:focus {
+  background-color: #f0f0f0;
+  border-color: #164679;
+  outline: none;
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #164679;
+  border: 2px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #476c94;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #476c94;
+}
+
+button:active {
+  background-color: #2c4b73;
+  transform: scale(0.98); 
+}
+
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+body.dark-mode #result {
+  color: #f0f0f0;
+}
+
+
+#bmiProgress {
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: width 0.5s ease-in-out; 
+}
+
+#bmiBar {
+  height: 100%;
+  border-radius: 5px;
+}
+
+
+body.dark-mode #bmiProgress {
+  background-color: #666;
+}
+
+
+#darkModeToggle {
+  background-color: #164679;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+#darkModeToggle:hover {
+  background-color: #476c94;
+}
+
+
+@media (max-width: 600px) {
   .container {
-    background-color: rgb(219, 202, 202);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+      width: 90%;
   }
-  
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  .input-group {
-    margin-bottom: 15px;
-    text-align: left;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input {
-    padding: 10px;
-    width: calc(100% -20px);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
+
   button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #164679;
-    border: 2px solid #333;
-    border-radius: 5px;
-    cursor: pointer;
+      font-size: 14px;
   }
-  
-  button:hover {
-    background-color: #476c94;
+
+  h1 {
+      font-size: 1.5rem;
   }
-  
-  #result{
-    margin-top: 20px;
-    font-size: 18px;
-    text-align: center;
-  }
+}

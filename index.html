@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BMI Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-  <body>
-      <div class="container">
-          <h1>BMI Calculator</h1>
-        
-          <div class="input-group">
-                <label for="age">Age:</label>
-                <input type="number" id="age" placeholder="Enter your age">
-          </div>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
 
-          <div class="input-group">
+        <button id="darkModeToggle">Toggle Dark Mode</button> 
+        <div class="input-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter your age">
+        </div>
+
+        <div class="input-group">
             <label for="weight">Weight (kg):</label>
             <input type="number" id="weight" placeholder="Enter your weight">
         </div>
 
-         <div class="input-group">
+        <div class="input-group">
             <label for="height">Height (cm):</label>
             <input type="number" id="height" placeholder="Enter your height">
         </div>
-          
-          <button onclick="calculateBMI()">Calculate BMI</button>
-          
-          <div id ="result">
 
-          </div>
-        
-      </div>
+        <button onclick="calculateBMI()">Calculate BMI</button>
 
+        <div id="result"></div>
+
+        <div id="bmiProgress" style="width: 100%; height: 10px; background-color: #ccc; border-radius: 5px; margin-top: 20px;">
+            <div id="bmiBar" style="height: 100%; border-radius: 5px;"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
